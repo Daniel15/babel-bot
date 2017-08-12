@@ -8,6 +8,7 @@
     "clean": "rm -f function.zip && rm -rf dist",
     "bundle": "bash ./scripts/bundle.sh",
     "package": "npm run clean && npm run build && npm run bundle",
+    "watch": "nodemon src/server.js --exec babel-node",
     "test": "jest & npm run flow",
     "build": "babel src --out-dir dist --ignore __tests__",
     "flow": "flow check"
@@ -31,7 +32,8 @@
     "babel-plugin-transform-flow-strip-types": "^6.21.0",
     "babel-plugin-transform-object-rest-spread": "^6.20.2",
     "flow-bin": "^0.37.4",
-    "jest": "^18.0.0"
+    "jest": "^18.0.0",
+    "nodemon": "^1.11.0"
   },
   "jest": {
     "rootDir": "src",
